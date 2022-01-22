@@ -1,0 +1,22 @@
+{
+  "name": "white-board",
+  "version": "1.0.0",
+  "description": "collabrative white borad",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "web connect whiteboard"
+  ],
+  "author": "chetan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
