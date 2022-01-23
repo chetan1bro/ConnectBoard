@@ -2,6 +2,13 @@ let canvas = document.getElementById('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+
+
+let download_img = function(e) {
+    var image = canvas.toDataURL("image/jpg");
+    e.href = image;
+  }
+  
 var io = io.connect('http://localhost:8080/');
 let ctx = canvas.getContext("2d");
 
@@ -40,3 +47,4 @@ window.onmousemove = (e) => {
     ctx.stroke();
     }
 }
+
