@@ -4,9 +4,12 @@ let app = express();
 let httpServer = require('http').createServer(app);
 
 let io = require('socket.io')(httpServer);
+let PORT = process.env.PORT || 3000;
+httpServer.listen(PORT ,() => console.log(`Server started on port $(PORT)`));
+
 
 let connections = [];
-io.on('connect', (socket) => {
+io.on('connection', (socket) => {
  connections.push(socket);
  console.log(`${socket.id} has connected`);
 
@@ -36,5 +39,3 @@ io.on('connect', (socket) => {
 })
 app.use(express.static("public"));
 
-let PORT = process.env.PORT || 8080;
-httpServer.listen(PORT ,() => console.log(`Server started on port $(PORT)`));

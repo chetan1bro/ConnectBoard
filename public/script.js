@@ -9,7 +9,7 @@ let download_img = function(e) {
     e.href = image;
   }
   
-var io = io.connect('http://localhost:8080/');
+var io = io.connect('http://localhost:3000/');
 let ctx = canvas.getContext("2d");
 
 let x;
@@ -42,7 +42,7 @@ window.onmousemove = (e) => {
     
     if(mouseDown)
     {
-        io.emit("draw",{x , y});
+        io.emit("draw",({x , y}));
     ctx.lineTo(x,y);
     ctx.stroke();
     }
