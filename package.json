@@ -4,11 +4,12 @@
   "description": "collabrative white borad",
   "main": "index.js",
   "scripts": {
-    
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev" : "nodemon index.js"
   },
   "keywords": [
-    "web connect whiteboard"
+    "example",
+    "heroku"
   ],
   "author": "chetan",
   "license": "ISC",
@@ -18,5 +19,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "v12.14.1"
   }
 }
